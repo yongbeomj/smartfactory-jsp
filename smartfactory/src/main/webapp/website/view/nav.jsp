@@ -11,8 +11,8 @@
 			<a href="#" style="color: white;">제품조회</a>
 			<a href="#" style="color: white;">작업지시서조회</a>
 			<a href="/smartfactory/website/view/board/boardwrite.jsp" style="color: white;">작업공정등록</a>
-			<a href="#" style="color: white;">작업공정조회</a>
-			<a href="/smartfactory/website/load.jsp" style="color: white;">홈으로</a>
+			<a href="/smartfactory/website/view/board/boardlist.jsp" style="color: white;">작업공정조회</a>
+			<a href="/smartfactory/website/index.jsp" style="color: white;">홈으로</a>
 		</nav>
 	</div>
 </body>

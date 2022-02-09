@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import dto.Board;
 
@@ -52,6 +53,27 @@ public class BoardDao {
 			System.out.println(e);
 		}
 		return false;
-
 	}
+
+	// 전체 게시물 조회
+	public ArrayList<Board> boardlist() {
+		ArrayList<Board> boards = new ArrayList<Board>();
+		String sql = "select * from board";
+		try {
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				Board board = new Board(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),
+						rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9),
+						rs.getString(10));
+				boards.add(board);
+				System.out.print("번호 : " + board.getBworkno());
+			}
+			return boards;
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return null;
+	}
+
 }
