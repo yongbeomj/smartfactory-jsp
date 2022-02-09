@@ -31,19 +31,19 @@
 	if (bmaterial != null && bmaterial.equals("작업중")){
 		bmaterial = "-";
 	} 
-	if (bmaterial != null && bprint.equals("작업중")){
+	if (bprint != null && bprint.equals("작업중")){
 		bprint = "-";
 	} 
-	if (bmaterial != null && bcoating.equals("작업중")){
+	if (bcoating != null && bcoating.equals("작업중")){
 		bcoating = "-";
 	} 
-	if (bmaterial != null && bpaper.equals("작업중")){
+	if (bpaper != null && bpaper.equals("작업중")){
 		bpaper = "-";
 	} 
-	if (bmaterial != null && bjoin.equals("작업중")){
+	if (bjoin != null && bjoin.equals("작업중")){
 		bjoin = "-";
 	} 
-	if (bmaterial != null && bpackaging.equals("작업중")){
+	if (bpackaging != null && bpackaging.equals("작업중")){
 		bpackaging = "-";
 	}
 	
