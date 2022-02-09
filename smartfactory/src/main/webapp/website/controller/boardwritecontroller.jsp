@@ -20,16 +20,40 @@
 	String bpackaging = request.getParameter("bpackaging");
 	String bdate = request.getParameter("bdate");
 	String btime = request.getParameter("btime");
-	System.out.println("작업번호 : " + bworkno);
+	
+	
+	
+	// 유효성검사
+	if (bworkno == null || bmaterial == null || bprint == null || bcoating == null || bpaper == null || bjoin == null || bpackaging == null || bdate.equals("") || btime.equals("")) {
+		out.print("<script>alert('입력이 안된 사항이 있습니다.');</script>");
+		out.println("<script>location.href='../view/board/boardwrite.jsp';</script>");
+	}
+	if (bmaterial != null && bmaterial.equals("작업중")){
+		bmaterial = "-";
+	} 
+	if (bmaterial != null && bprint.equals("작업중")){
+		bprint = "-";
+	} 
+	if (bmaterial != null && bcoating.equals("작업중")){
+		bcoating = "-";
+	} 
+	if (bmaterial != null && bpaper.equals("작업중")){
+		bpaper = "-";
+	} 
+	if (bmaterial != null && bjoin.equals("작업중")){
+		bjoin = "-";
+	} 
+	if (bmaterial != null && bpackaging.equals("작업중")){
+		bpackaging = "-";
+	}
+	
 
 	Board board = new Board(bworkno, bmaterial, bprint, bcoating, bpaper, bjoin, bpackaging, bdate, btime);
 	boolean result = BoardDao.getboarddao().boardwrite(board);
 	if (result) {
-		out.println("<script>alert('저장완료');</script>");
-		response.sendRedirect("../view/board/boardlist.jsp");
+		out.println("<script>alert('제품 등록후 공정이 등록되었습니다');</script>");
+		out.println("<script>location.href='../view/board/boardlist.jsp';</script>");
 	}
-	
-	
 	%>
 </body>
 </html>

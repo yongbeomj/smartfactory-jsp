@@ -30,8 +30,9 @@ public class Board {
 		this.bdate = bdate;
 		this.btime = btime;
 	}
-	// 게시물 작성
-	public Board( String bworkno, String bmaterial, String bprint, String bcoating, String bpaper, String bjoin,
+
+
+	public Board(String bworkno, String bmaterial, String bprint, String bcoating, String bpaper, String bjoin,
 			String bpackaging, String bdate, String btime) {
 		this.bworkno = bworkno;
 		this.bmaterial = bmaterial;

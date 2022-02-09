@@ -32,7 +32,6 @@ public class BoardDao {
 		return boarddao;
 	}
 
-	// 게시물 작성
 	public boolean boardwrite(Board board) {
 
 		String sql = "insert into board( bworkno , bmaterial , bprint , bcoating, bpaper, bjoin, bpackaging, bdate, btime) values(?,?,?,?,?,?,?,?,?)";

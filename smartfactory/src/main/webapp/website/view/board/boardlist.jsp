@@ -38,8 +38,17 @@
 				<td><%=board.getBpaper()%></td>
 				<td><%=board.getBjoin()%></td>
 				<td><%=board.getBpackaging()%></td>
-				<td><%=board.getBdate()%></td>
-				<td><%=board.getBtime()%></td>
+				<%
+				StringBuffer date = new StringBuffer(board.getBdate());
+				date.insert(4, "-");
+				date.insert(7, "-");
+				%>
+				<td><%=date %></td>
+				<%
+				StringBuffer time = new StringBuffer(board.getBtime());
+				time.insert(2, ":");
+				%>
+				<td><%=time%></td>
 			</tr>
 			<%
 			}
